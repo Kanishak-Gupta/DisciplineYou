@@ -1,0 +1,17 @@
+# Java
+*.class
+*.jar
+
+# Build folders
+build/
+out/
+
+# IDE
+.idea/
+.vscode/
+
+# JDK
+tools/jdk-21.0.2/
+
+#download files
+tools/apache-maven-3.9.6/

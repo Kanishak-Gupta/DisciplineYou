@@ -1,0 +1,6 @@
+1. if you have marked cancelled to any class you cant undo it
+2. no option for adding extra class
+3. it should show error if we try to mark attendance for future class but we can mark cancelled for any future class
+4. attendance summary should show attendance of all the classes from the starting of the semester to the current date , if not marked yet it will be calculated as absent but note one thing it should not show absent on the timetable
+5. for time table add am and pm the time too so that time table show classes in order ,first am then pm
+6. Keep the academic section and goals & tasks section separately , i mean academic section should base on the semester but goals & tasks should work on normal calander(12 months)

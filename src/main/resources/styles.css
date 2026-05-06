@@ -1,0 +1,301 @@
+/* ═══════════════════════════════════════════════════════════
+   DisciplineYou — JavaFX Stylesheet
+   Clean, functional design with blue accent
+   ═══════════════════════════════════════════════════════════ */
+
+/* ── Global ── */
+.root {
+    -fx-font-family: "Segoe UI", "System", sans-serif;
+    -fx-font-size: 13px;
+    -fx-background-color: #F5F5F5;
+}
+
+/* ── Header ── */
+.app-header {
+    -fx-background-color: linear-gradient(to right, #1565C0, #1E88E5);
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.25), 8, 0, 0, 2);
+}
+
+/* ── Scroll area ── */
+.scroll-content {
+    -fx-background-color: transparent;
+    -fx-background: #F5F5F5;
+}
+.scroll-content .viewport {
+    -fx-background-color: transparent;
+}
+
+/* ── Section TitledPanes ── */
+.section-pane {
+    -fx-background-color: white;
+    -fx-background-radius: 6;
+    -fx-border-color: #E0E0E0;
+    -fx-border-radius: 6;
+    -fx-border-width: 1;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.06), 4, 0, 0, 1);
+}
+
+.section-pane > .title {
+    -fx-background-color: white;
+    -fx-background-radius: 6 6 0 0;
+    -fx-padding: 10 15;
+    -fx-font-weight: bold;
+    -fx-font-size: 14px;
+}
+
+.section-pane > .title:hover {
+    -fx-background-color: #F5F5F5;
+}
+
+.section-pane > *.content {
+    -fx-background-color: white;
+    -fx-background-radius: 0 0 6 6;
+    -fx-padding: 5;
+}
+
+/* ── Goal Rows ── */
+.goal-row {
+    -fx-background-color: #FAFAFA;
+    -fx-background-radius: 4;
+    -fx-border-color: #EEEEEE;
+    -fx-border-radius: 4;
+    -fx-border-width: 1;
+}
+
+.goal-row:hover {
+    -fx-background-color: #E3F2FD;
+    -fx-border-color: #90CAF9;
+}
+
+/* ── Timetable Rows ── */
+.timetable-row {
+    -fx-background-color: #FAFAFA;
+    -fx-background-radius: 4;
+    -fx-border-color: #EEEEEE;
+    -fx-border-radius: 4;
+    -fx-border-width: 1;
+}
+
+.timetable-row:hover {
+    -fx-background-color: #E8F5E9;
+    -fx-border-color: #A5D6A7;
+}
+
+/* ── Buttons ── */
+.accent-button {
+    -fx-background-color: #1E88E5;
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+    -fx-background-radius: 4;
+    -fx-padding: 6 16;
+    -fx-cursor: hand;
+}
+
+.accent-button:hover {
+    -fx-background-color: #1565C0;
+}
+
+.accent-button:pressed {
+    -fx-background-color: #0D47A1;
+}
+
+.link-button {
+    -fx-background-color: transparent;
+    -fx-text-fill: #1E88E5;
+    -fx-font-weight: bold;
+    -fx-padding: 4 8;
+    -fx-cursor: hand;
+    -fx-border-color: transparent;
+}
+
+.link-button:hover {
+    -fx-text-fill: #1565C0;
+    -fx-underline: true;
+}
+
+.icon-button {
+    -fx-background-color: #E3F2FD;
+    -fx-text-fill: #1E88E5;
+    -fx-font-size: 11px;
+    -fx-padding: 3 8;
+    -fx-background-radius: 3;
+    -fx-cursor: hand;
+}
+
+.icon-button:hover {
+    -fx-background-color: #BBDEFB;
+}
+
+.delete-button {
+    -fx-background-color: transparent;
+    -fx-text-fill: #E57373;
+    -fx-font-size: 11px;
+    -fx-padding: 2 6;
+    -fx-cursor: hand;
+}
+
+.delete-button:hover {
+    -fx-background-color: #FFCDD2;
+    -fx-background-radius: 3;
+}
+
+/* ── Attendance Buttons ── */
+.present-button {
+    -fx-background-color: #E8F5E9;
+    -fx-text-fill: #4CAF50;
+    -fx-font-weight: bold;
+    -fx-font-size: 11px;
+    -fx-padding: 4 10;
+    -fx-background-radius: 3;
+    -fx-cursor: hand;
+}
+
+.present-button:hover {
+    -fx-background-color: #C8E6C9;
+}
+
+.present-active {
+    -fx-background-color: #4CAF50;
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+    -fx-font-size: 11px;
+    -fx-padding: 4 10;
+    -fx-background-radius: 3;
+}
+
+.absent-button {
+    -fx-background-color: #FFEBEE;
+    -fx-text-fill: #F44336;
+    -fx-font-weight: bold;
+    -fx-font-size: 11px;
+    -fx-padding: 4 10;
+    -fx-background-radius: 3;
+    -fx-cursor: hand;
+}
+
+.absent-button:hover {
+    -fx-background-color: #FFCDD2;
+}
+
+.absent-active {
+    -fx-background-color: #F44336;
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+    -fx-font-size: 11px;
+    -fx-padding: 4 10;
+    -fx-background-radius: 3;
+}
+
+/* ── Text fields ── */
+.text-field {
+    -fx-background-color: white;
+    -fx-border-color: #E0E0E0;
+    -fx-border-radius: 3;
+    -fx-background-radius: 3;
+    -fx-padding: 5 8;
+}
+
+.text-field:focused {
+    -fx-border-color: #1E88E5;
+    -fx-effect: dropshadow(gaussian, rgba(30,136,229,0.2), 4, 0, 0, 0);
+}
+
+.text-area {
+    -fx-background-color: white;
+    -fx-border-color: #E0E0E0;
+    -fx-border-radius: 3;
+    -fx-background-radius: 3;
+}
+
+.text-area:focused {
+    -fx-border-color: #1E88E5;
+}
+
+/* ── Progress Bars ── */
+.progress-bar {
+    -fx-background-color: #E0E0E0;
+    -fx-background-radius: 9;
+    -fx-padding: 0;
+}
+
+.progress-bar .track {
+    -fx-background-color: #E0E0E0;
+    -fx-background-radius: 9;
+}
+
+.progress-bar .bar {
+    -fx-background-radius: 9;
+    -fx-background-insets: 0;
+}
+
+/* ── Check boxes ── */
+.check-box .box {
+    -fx-background-color: white;
+    -fx-border-color: #BDBDBD;
+    -fx-border-radius: 3;
+    -fx-background-radius: 3;
+    -fx-padding: 3;
+}
+
+.check-box:selected .box {
+    -fx-background-color: #1E88E5;
+    -fx-border-color: #1E88E5;
+}
+
+.check-box:selected .mark {
+    -fx-background-color: white;
+}
+
+/* ── Combo boxes ── */
+.combo-box {
+    -fx-background-color: white;
+    -fx-border-color: #E0E0E0;
+    -fx-border-radius: 3;
+    -fx-background-radius: 3;
+}
+
+/* ── Tabs ── */
+.main-tabs .tab-header-area {
+    -fx-padding: 0;
+}
+
+.main-tabs .tab-header-background {
+    -fx-background-color: white;
+    -fx-border-color: transparent transparent #E0E0E0 transparent;
+    -fx-border-width: 0 0 1 0;
+}
+
+.main-tabs .tab {
+    -fx-background-color: transparent;
+    -fx-background-radius: 0;
+    -fx-padding: 10 24;
+    -fx-font-size: 14px;
+    -fx-font-weight: bold;
+    -fx-cursor: hand;
+}
+
+.main-tabs .tab:selected {
+    -fx-background-color: transparent;
+    -fx-border-color: transparent transparent #1E88E5 transparent;
+    -fx-border-width: 0 0 3 0;
+}
+
+.main-tabs .tab .tab-label {
+    -fx-text-fill: #757575;
+}
+
+.main-tabs .tab:selected .tab-label {
+    -fx-text-fill: #1E88E5;
+}
+
+.main-tabs .tab-content-area {
+    -fx-background-color: #F5F5F5;
+}
+
+/* ── Tooltips ── */
+.tooltip {
+    -fx-background-color: #424242;
+    -fx-text-fill: white;
+    -fx-font-size: 11px;
+    -fx-background-radius: 3;
+}
