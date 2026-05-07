@@ -1,6 +1,6 @@
 /* ═══════════════════════════════════════════════════════════
    DisciplineYou — JavaFX Stylesheet
-   Clean, functional design with blue accent
+   Clean, functional design with blue accent + dark mode support
    ═══════════════════════════════════════════════════════════ */
 
 /* ── Global ── */
@@ -298,4 +298,132 @@
     -fx-text-fill: white;
     -fx-font-size: 11px;
     -fx-background-radius: 3;
+}
+
+/* ══════════════════════════════════════════════════════════
+   DARK MODE
+   ══════════════════════════════════════════════════════════ */
+
+.dark-mode .root,
+.dark-mode {
+    -fx-background-color: #1E1E1E;
+}
+
+.dark-mode .scroll-content {
+    -fx-background: #1E1E1E;
+}
+
+.dark-mode .scroll-content .viewport {
+    -fx-background-color: #1E1E1E;
+}
+
+.dark-mode .section-pane {
+    -fx-background-color: #2D2D2D;
+    -fx-border-color: #404040;
+}
+
+.dark-mode .section-pane > .title {
+    -fx-background-color: #2D2D2D;
+    -fx-text-fill: #E0E0E0;
+}
+
+.dark-mode .section-pane > .title:hover {
+    -fx-background-color: #383838;
+}
+
+.dark-mode .section-pane > *.content {
+    -fx-background-color: #2D2D2D;
+}
+
+.dark-mode .goal-row {
+    -fx-background-color: #2D2D2D;
+    -fx-border-color: #404040;
+}
+
+.dark-mode .goal-row:hover {
+    -fx-background-color: #1A3A5C;
+    -fx-border-color: #1E88E5;
+}
+
+.dark-mode .timetable-row {
+    -fx-background-color: #2D2D2D;
+    -fx-border-color: #404040;
+}
+
+.dark-mode .timetable-row:hover {
+    -fx-background-color: #1B3A1B;
+    -fx-border-color: #4CAF50;
+}
+
+.dark-mode .text-field {
+    -fx-background-color: #383838;
+    -fx-border-color: #505050;
+    -fx-text-fill: #E0E0E0;
+    -fx-prompt-text-fill: #808080;
+}
+
+.dark-mode .text-area {
+    -fx-background-color: #383838;
+    -fx-border-color: #505050;
+    -fx-text-fill: #E0E0E0;
+}
+
+.dark-mode .text-area .content {
+    -fx-background-color: #383838;
+}
+
+.dark-mode .combo-box {
+    -fx-background-color: #383838;
+    -fx-border-color: #505050;
+}
+
+.dark-mode .combo-box .list-cell {
+    -fx-text-fill: #E0E0E0;
+}
+
+.dark-mode .check-box .box {
+    -fx-background-color: #383838;
+    -fx-border-color: #606060;
+}
+
+.dark-mode .check-box {
+    -fx-text-fill: #E0E0E0;
+}
+
+.dark-mode .main-tabs .tab-header-background {
+    -fx-background-color: #2D2D2D;
+    -fx-border-color: transparent transparent #404040 transparent;
+}
+
+.dark-mode .main-tabs .tab .tab-label {
+    -fx-text-fill: #808080;
+}
+
+.dark-mode .main-tabs .tab:selected .tab-label {
+    -fx-text-fill: #64B5F6;
+}
+
+.dark-mode .main-tabs .tab-content-area {
+    -fx-background-color: #1E1E1E;
+}
+
+.dark-mode .icon-button {
+    -fx-background-color: #1A3A5C;
+    -fx-text-fill: #64B5F6;
+}
+
+.dark-mode .link-button {
+    -fx-text-fill: #64B5F6;
+}
+
+.dark-mode .progress-bar .track {
+    -fx-background-color: #404040;
+}
+
+.dark-mode .label {
+    -fx-text-fill: #E0E0E0;
+}
+
+.dark-mode .titled-pane > .title > .arrow-button .arrow {
+    -fx-background-color: #E0E0E0;
 }

@@ -39,11 +39,20 @@ public class DisciplineYouApp extends Application {
         primaryStage.setScene(scene);
         primaryStage.setMinWidth(700);
         primaryStage.setMinHeight(500);
+
+        // Register keyboard shortcuts
+        mainView.registerShortcuts(scene);
+
         primaryStage.show();
 
         // Show shift notification if any goals were moved
         if (!shiftedGoals.isEmpty()) {
-            mainView.showShiftNotification(shiftedGoals.size());
+            javafx.scene.control.Alert alert = new javafx.scene.control.Alert(
+                    javafx.scene.control.Alert.AlertType.INFORMATION,
+                    shiftedGoals.size() + " overdue goal(s) were shifted to today.",
+                    javafx.scene.control.ButtonType.OK);
+            alert.setHeaderText("⚠ Goals Auto-Shifted");
+            alert.showAndWait();
         }
     }
 

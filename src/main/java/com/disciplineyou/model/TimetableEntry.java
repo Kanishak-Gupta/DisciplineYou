@@ -9,6 +9,7 @@ public class TimetableEntry {
     private int subjectId;
     private String room;
     private String faculty;
+    private String notes;
 
     // Transient display fields
     private String subjectName;
@@ -57,6 +58,9 @@ public class TimetableEntry {
 
     public String getSubjectShortCode() { return subjectShortCode; }
     public void setSubjectShortCode(String subjectShortCode) { this.subjectShortCode = subjectShortCode; }
+
+    public String getNotes() { return notes; }
+    public void setNotes(String notes) { this.notes = notes; }
 
     /** Get a human-readable day name */
     public String getDayName() {

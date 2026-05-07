@@ -16,7 +16,7 @@ public class TimetableDAO {
     }
 
     public TimetableEntry insertEntry(TimetableEntry entry) {
-        String sql = "INSERT INTO timetable (semester_id, day_of_week, start_time, end_time, subject_id, room, faculty) VALUES (?, ?, ?, ?, ?, ?, ?)";
+        String sql = "INSERT INTO timetable (semester_id, day_of_week, start_time, end_time, subject_id, room, faculty, notes) VALUES (?, ?, ?, ?, ?, ?, ?, ?)";
         try (PreparedStatement ps = getConn().prepareStatement(sql, Statement.RETURN_GENERATED_KEYS)) {
             ps.setInt(1, entry.getSemesterId());
             ps.setInt(2, entry.getDayOfWeek());
@@ -25,6 +25,7 @@ public class TimetableDAO {
             ps.setInt(5, entry.getSubjectId());
             ps.setString(6, entry.getRoom());
             ps.setString(7, entry.getFaculty());
+            ps.setString(8, entry.getNotes());
             ps.executeUpdate();
             try (ResultSet keys = ps.getGeneratedKeys()) {
                 if (keys.next()) entry.setId(keys.getInt(1));
@@ -36,7 +37,7 @@ public class TimetableDAO {
     }
 
     public void updateEntry(TimetableEntry entry) {
-        String sql = "UPDATE timetable SET day_of_week=?, start_time=?, end_time=?, subject_id=?, room=?, faculty=? WHERE id=?";
+        String sql = "UPDATE timetable SET day_of_week=?, start_time=?, end_time=?, subject_id=?, room=?, faculty=?, notes=? WHERE id=?";
         try (PreparedStatement ps = getConn().prepareStatement(sql)) {
             ps.setInt(1, entry.getDayOfWeek());
             ps.setString(2, entry.getStartTime());
@@ -44,7 +45,8 @@ public class TimetableDAO {
             ps.setInt(4, entry.getSubjectId());
             ps.setString(5, entry.getRoom());
             ps.setString(6, entry.getFaculty());
-            ps.setInt(7, entry.getId());
+            ps.setString(7, entry.getNotes());
+            ps.setInt(8, entry.getId());
             ps.executeUpdate();
         } catch (SQLException e) {
             throw new RuntimeException("Error updating timetable entry", e);
@@ -151,6 +153,7 @@ public class TimetableDAO {
         e.setSubjectId(rs.getInt("subject_id"));
         e.setRoom(rs.getString("room"));
         e.setFaculty(rs.getString("faculty"));
+        try { e.setNotes(rs.getString("notes")); } catch (SQLException ex) {}
         try { e.setSubjectName(rs.getString("subject_name")); } catch (SQLException ex) {}
         try { e.setSubjectShortCode(rs.getString("subject_short_code")); } catch (SQLException ex) {}
         return e;

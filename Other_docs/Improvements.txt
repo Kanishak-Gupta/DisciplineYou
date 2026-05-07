@@ -11,3 +11,21 @@ Phase 2 :
 2. in "edit semester timetable" window, initially when it will open it should only show the classes and a "add class" option
    on clicking "add class" option then the details that to be enter should appear like day, subject ,time etc
    same as on clicking edit option beside classes
+3. now we need a whole new goals and task section, so there should be two options one shows tasks and other shows your time expenditure in a day 
+4. tasks section : it is a list of tasks that user can input by their own, so there should be a add new task option which consists of date till the user have to complete, and a option where user can input sub task(day wise and week wise) which is like a check box 
+my whole idea is user can input date oriented task and divide the task into sub tasks (week wise and then further divide into day-wise
+it is like a list of task, on clicking any task it should week wise task with a check box, weeks should be divided acc to days between the today the target date not by calender, but it should show date and days acc to the calender, the on clicking weeks it should show day wise tasks with a checkbox, if the user forget to check the box it should display a warning message on the upper part of the window about the task
+5. time expenditure section : it is basically a analysis block which should take input time expenditure for a work and that work the user can input, and data should store acc to the calender 
+6. Task History/Archive: Store completed tasks to track productivity over time
+7.Absent Class Log: Track why you missed (sick, personal, etc.) for context
+8. UX/UI Improvements
+Dark Mode: Reduce eye strain for late-night studying
+Drag-and-Drop Scheduling: Rearrange timetable by dragging classes
+Quick Add Shortcuts: Keyboard shortcuts for fast task/class entry
+Search & Filter: Find tasks, classes, activities quickly
+Notifications Panel: Centralized view of all alerts and warnings
+Customizable Dashboard: Users can arrange widgets they care about
+9. Gamification Elements (Optional but engaging)
+Streak Counter: Consecutive days with all tasks completed
+Achievements/Badges: Earn badges for consistency milestones
+Weekly Leaderboard: (Personal only) challenge yourself week-over-week
