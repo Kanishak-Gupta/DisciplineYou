@@ -18,7 +18,9 @@ D:\DisciplineYou\src\main\java\com\disciplineyou\dao\TimetableDAO.java
 D:\DisciplineYou\src\main\java\com\disciplineyou\model\Subject.java
 D:\DisciplineYou\src\main\java\com\disciplineyou\model\StudyLog.java
 D:\DisciplineYou\src\main\java\com\disciplineyou\ui\GoalSection.java
+D:\DisciplineYou\src\main\java\com\disciplineyou\dao\ExtraClassDAO.java
 D:\DisciplineYou\src\main\java\com\disciplineyou\db\DatabaseManager.java
+D:\DisciplineYou\src\main\java\com\disciplineyou\model\ExtraClass.java
 D:\DisciplineYou\src\main\java\com\disciplineyou\model\Task.java
 D:\DisciplineYou\src\main\java\com\disciplineyou\dao\GoalDAO.java
 D:\DisciplineYou\src\main\java\com\disciplineyou\model\Semester.java

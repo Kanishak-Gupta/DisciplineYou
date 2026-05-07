@@ -53,7 +53,8 @@ public class AttendanceSection extends VBox {
         }
 
         for (Subject subj : subjects) {
-            int[] stats = attendanceDAO.getSubjectAttendanceStats(subj.getId());
+            java.time.LocalDate endDate = java.time.LocalDate.now().isBefore(activeSem.getEndDate()) ? java.time.LocalDate.now() : activeSem.getEndDate();
+            int[] stats = attendanceDAO.getCalculatedAttendanceStats(subj.getId(), activeSem.getStartDate(), endDate);
             int present = stats[0];
             int total = stats[1];
             double pct = total > 0 ? (double) present / total * 100 : 0;

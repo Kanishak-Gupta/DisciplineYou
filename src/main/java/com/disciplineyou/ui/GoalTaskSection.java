@@ -70,10 +70,10 @@ public class GoalTaskSection extends VBox {
         Map<YearMonth, List<LocalDate>> weeksByMonth = allWeeks.stream()
                 .collect(Collectors.groupingBy(YearMonth::from, TreeMap::new, Collectors.toList()));
 
-        // Always show current month and next 2 months even if empty
+        // Always show all 12 months for the current year
         YearMonth now = YearMonth.now();
-        for (int i = -1; i <= 2; i++) {
-            weeksByMonth.putIfAbsent(now.plusMonths(i), new ArrayList<>());
+        for (int month = 1; month <= 12; month++) {
+            weeksByMonth.putIfAbsent(YearMonth.of(now.getYear(), month), new ArrayList<>());
         }
 
         for (Map.Entry<YearMonth, List<LocalDate>> entry : weeksByMonth.entrySet()) {

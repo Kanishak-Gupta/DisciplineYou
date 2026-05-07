@@ -148,6 +148,22 @@ public class DatabaseManager {
                 )
             """);
 
+            stmt.execute("""
+                CREATE TABLE IF NOT EXISTS extra_classes (
+                    id INTEGER PRIMARY KEY AUTOINCREMENT,
+                    semester_id INTEGER NOT NULL,
+                    class_date DATE NOT NULL,
+                    start_time TEXT NOT NULL,
+                    end_time TEXT NOT NULL,
+                    subject_id INTEGER NOT NULL,
+                    room TEXT,
+                    faculty TEXT,
+                    status TEXT,
+                    FOREIGN KEY (semester_id) REFERENCES semesters(id) ON DELETE CASCADE,
+                    FOREIGN KEY (subject_id) REFERENCES subjects(id) ON DELETE CASCADE
+                )
+            """);
+
             // ── New task system tables ──
             stmt.execute("""
                 CREATE TABLE IF NOT EXISTS tasks (
